@@ -127,7 +127,7 @@ export default function App() {
             <img 
               src="/logo.png" 
               alt="La Quesería D' Guachipelín Logo" 
-              className="w-48 h-48 md:w-56 md:h-56 object-contain bg-white rounded-full p-2 shadow-2xl" 
+              className="w-48 h-48 md:w-56 md:h-56 object-contain bg-white rounded-full p-2 shadow-2xl transition-transform duration-300 hover:scale-105" 
             />
           </motion.div>
           <motion.h1 
@@ -231,7 +231,7 @@ export default function App() {
                 desc: 'Fresco, blanco y de textura suave. Tradición costarricense ideal para el desayuno o acompañar con café.',
                 sizes: 'Precio por Kilogramo',
                 price: '₡4,650',
-                img: '/queso-fresco.png',
+                img: '/queso-tierno.png',
               },
               {
                 id: 'palmito',
@@ -255,7 +255,7 @@ export default function App() {
                 desc: 'El clásico de finca. Salado, firme y delicioso; no puede faltar sobre un buen gallo pinto.',
                 sizes: 'Precio por Kilogramo',
                 price: '₡5,400',
-                img: '/queso-fresco.png',
+                img: '/queso-semiduro.png',
               }
             ].map((product, idx) => (
               <motion.div 
@@ -460,7 +460,7 @@ export default function App() {
               </div>
               <h3 className="font-serif text-2xl font-bold mb-3">Retiro en Local</h3>
               <p className="text-brand-light-brown">
-                Visítenos en Escazú para encargar y retirar directamente en nuestra bodega. Siempre será bienvenido.
+                Visítenos en Escazú para encargar y retirar directamente en nuestra tienda. Siempre será bienvenido.
               </p>
             </div>
           </div>
