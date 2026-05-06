@@ -12,7 +12,7 @@ import {
 
 export default function App() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false); // Mobile menu state
 
   useEffect(() => {
     const handleScroll = () => {
