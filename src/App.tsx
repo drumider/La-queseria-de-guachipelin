@@ -47,7 +47,6 @@ export default function App() {
               src="/logo.png" 
               alt="Logo" 
               className="h-14 w-auto rounded-full bg-white object-contain shadow-sm border border-brand-cream hidden sm:block" 
-              onError={(e) => e.currentTarget.style.display = 'none'} 
             />
             <span className="font-serif text-2xl md:text-3xl font-bold tracking-tight">
               La Quesería <span className="text-brand-terracotta">D' Guachipelín</span>
@@ -129,7 +128,6 @@ export default function App() {
               src="/logo.png" 
               alt="La Quesería D' Guachipelín Logo" 
               className="w-48 h-48 md:w-56 md:h-56 object-contain bg-white rounded-full p-2 shadow-2xl" 
-              onError={(e) => e.currentTarget.style.display = 'none'} 
             />
           </motion.div>
           <motion.h1 
@@ -176,13 +174,6 @@ export default function App() {
               src="/2024.png" 
               alt="La Quesería D' Guachipelín Local" 
               className="rounded-2xl shadow-2xl w-full h-[500px] object-cover"
-              onError={(e) => {
-                const target = e.currentTarget as HTMLImageElement;
-                const fallback = "https://images.unsplash.com/photo-1528698827591-e19ccd7bc23d?auto=format&fit=crop&q=80";
-                if (target.src !== fallback) {
-                  target.src = fallback;
-                }
-              }}
             />
           </motion.div>
           <motion.div 
@@ -240,8 +231,7 @@ export default function App() {
                 desc: 'Fresco, blanco y de textura suave. Tradición costarricense ideal para el desayuno o acompañar con café.',
                 sizes: 'Precio por Kilogramo',
                 price: '₡4,650',
-                img: '/queso-turrialba.png',
-                fallback: 'https://images.unsplash.com/photo-1559561853-08451507cbe7?auto=format&fit=crop&q=80',
+                img: '/queso-fresco.png',
               },
               {
                 id: 'palmito',
@@ -250,7 +240,6 @@ export default function App() {
                 sizes: 'Precio por Kilogramo',
                 price: '₡9,500',
                 img: '/queso-palmito.png',
-                fallback: 'https://images.unsplash.com/photo-1628198759520-21e1fe0e9e4f?auto=format&fit=crop&q=80',
               },
               {
                 id: 'ahumado',
@@ -259,7 +248,6 @@ export default function App() {
                 sizes: 'Precio por Kilogramo',
                 price: '₡6,950',
                 img: '/queso-ahumado.png',
-                fallback: 'https://images.unsplash.com/photo-1453060590797-2d5f419b54cb?auto=format&fit=crop&q=80',
               },
               {
                 id: 'semiduro',
@@ -268,7 +256,6 @@ export default function App() {
                 sizes: 'Precio por Kilogramo',
                 price: '₡5,400',
                 img: '/queso-fresco.png',
-                fallback: 'https://images.unsplash.com/photo-1589881133595-a1c72cb63eb7?auto=format&fit=crop&q=80',
               }
             ].map((product, idx) => (
               <motion.div 
@@ -284,12 +271,6 @@ export default function App() {
                     src={product.img} 
                     alt={product.name} 
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    onError={(e) => {
-                      const target = e.currentTarget as HTMLImageElement;
-                      if (target.src !== product.fallback) {
-                        target.src = product.fallback;
-                      }
-                    }}
                   />
                   <div className="absolute top-3 right-3 bg-brand-cream/90 text-brand-brown px-3 py-1 rounded-full text-sm font-bold shadow">
                     {product.price}
@@ -347,13 +328,6 @@ export default function App() {
                 src="/leche-cruda.png" 
                 alt="Leche cruda de campo" 
                 className="w-full h-full object-cover"
-                onError={(e) => {
-                  const target = e.currentTarget as HTMLImageElement;
-                  const fallback = 'https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&fit=crop&q=80';
-                  if (target.src !== fallback) {
-                    target.src = fallback;
-                  }
-                }}
               />
             </motion.div>
           </div>
