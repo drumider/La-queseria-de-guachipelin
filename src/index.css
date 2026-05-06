@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-serif: "Playfair Display", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+
+  --color-brand-cream: #FFFDF8;
+  --color-brand-brown: #4A1A12;
+  --color-brand-light-brown: #8A483E;
+  --color-brand-olive: #E87019;
+  --color-brand-olive-light: #FBEBDD;
+  --color-brand-terracotta: #E87019;
+  --color-brand-whatsapp: #25D366;
+  --color-brand-whatsapp-hover: #1EBE5D;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-brand-cream);
+  color: var(--color-brand-brown);
+}
+
